@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 183870782}
   - component: {fileID: 183870781}
   - component: {fileID: 183870780}
+  - component: {fileID: 183870786}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -269,6 +270,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &183870786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 183870779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c1029213a0bb4a8bd0c95a96ed5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &255489307
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 255489309}
   - component: {fileID: 255489308}
+  - component: {fileID: 255489310}
   m_Layer: 0
   m_Name: trees-and-bushes_0
   m_TagString: Untagged
@@ -342,6 +355,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255489310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255489307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7251a138edc02de44a47812949f961e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &808377100
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +558,7 @@ GameObject:
   - component: {fileID: 1032318060}
   - component: {fileID: 1032318059}
   - component: {fileID: 1032318058}
+  - component: {fileID: 1032318061}
   m_Layer: 0
   m_Name: Dog 2
   m_TagString: Untagged
@@ -585,6 +610,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032318061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032318057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c1029213a0bb4a8bd0c95a96ed5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203225285
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203225287}
   - component: {fileID: 1203225286}
+  - component: {fileID: 1203225288}
   m_Layer: 0
   m_Name: trees-and-bushes_0 (3)
   m_TagString: Untagged
@@ -658,6 +695,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203225288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1203225285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7251a138edc02de44a47812949f961e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385206123
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +716,7 @@ GameObject:
   - component: {fileID: 1385206124}
   - component: {fileID: 1385206125}
   - component: {fileID: 1385206126}
+  - component: {fileID: 1385206127}
   m_Layer: 0
   m_Name: Dog 1
   m_TagString: Untagged
@@ -719,6 +768,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
+--- !u!114 &1385206127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385206123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c1029213a0bb4a8bd0c95a96ed5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1542981605
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654164396}
   - component: {fileID: 1654164395}
+  - component: {fileID: 1654164397}
   m_Layer: 0
   m_Name: trees-and-bushes_0 (2)
   m_TagString: Untagged
@@ -977,6 +1038,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654164397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654164394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7251a138edc02de44a47812949f961e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1689570195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1148,7 @@ GameObject:
   - component: {fileID: 1864501304}
   - component: {fileID: 1864501309}
   - component: {fileID: 1864501308}
+  - component: {fileID: 1864501310}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -1219,6 +1292,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1864501310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864501303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c1029213a0bb4a8bd0c95a96ed5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932302277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132753557}
   - component: {fileID: 2132753556}
+  - component: {fileID: 2132753558}
   m_Layer: 0
   m_Name: trees-and-bushes_0 (1)
   m_TagString: Untagged
@@ -1383,3 +1468,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2132753558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132753555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7251a138edc02de44a47812949f961e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
