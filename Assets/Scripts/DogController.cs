@@ -13,11 +13,12 @@ public class DogController : MonoBehaviour {
 	void Start () {
         movement = GetComponent<PlayerMovement>();
         lastTimeChange = 0;
+        ChangeDirectionTime = Random.Range(3.0f, 7.0f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.timeSinceLevelLoad > lastTimeChange + ChangeDirectionTime) {
+		if (Time.timeSinceLevelLoad > lastTimeChange + ChangeDirectionTime || lastTimeChange == 0) {
             changeDirection();
         }
         movement.Move(moveDirection);
