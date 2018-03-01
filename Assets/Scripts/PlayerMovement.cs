@@ -50,4 +50,8 @@ public class PlayerMovement : MonoBehaviour {
 	public void Move(Vector2 direction) {
 		this.direction = direction;
 	}
+
+	public void PlayIdle() {
+		anim.Play (IdleAnimation);
+	}
 }

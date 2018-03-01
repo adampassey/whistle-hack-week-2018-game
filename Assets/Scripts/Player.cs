@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		if (HasWhistle) {
+		if (HasWhistle && !GameState.Instance.GameOver) {
 			Vector3 rotDir = (transform.position - Target.transform.position).normalized;
 			Quaternion lookRotation = Quaternion.LookRotation(rotDir, Vector3.forward);
 			lookRotation.x = 0f;
@@ -32,6 +32,29 @@ public class Player : MonoBehaviour {
 			//arrow.transform.Translate (arrow.transform.forward * 2);
 			arrow.transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, 0.3f);
 
+		}
+	}
+
+	public void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.name == Target.gameObject.name) {
+			if (coll.gameObject == null)
+				return;
+
+			gameObject.GetComponent<PlayerController> ().enabled = false;
+
+			Target.gameObject.GetComponent<PlayerMovement> ().PlayIdle ();
+			GameObject dogSprite = Target.gameObject.transform.Find ("Sprite").gameObject;
+			dogSprite.transform.SetParent (transform);
+			dogSprite.transform.localPosition = new Vector2 (0f, 0.295f);
+			GameObject.Destroy (coll.gameObject);
+
+			PlayerMovement m = GetComponent<PlayerMovement> ();
+			m.PlayIdle ();
+			m.Move (Vector2.zero);
+
+			GameObject.Destroy (arrow);
+
+			GameState.Instance.Win (gameObject.name);
 		}
 	}
 }
