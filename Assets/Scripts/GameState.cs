@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
 
@@ -11,6 +13,8 @@ public class GameState : MonoBehaviour {
 	public GameObject ActorObject;
 	public GameObject StartScreenObject;
 	public GameObject Splitter;
+	public GameObject GameOverScreen;
+	public GameObject WinText;
 
 	public GameObject PlayerOne;
 	public GameObject PlayerTwo;
@@ -40,7 +44,7 @@ public class GameState : MonoBehaviour {
 	}
 
 	public void RestartGame() {
-
+		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 	}
 
 	public void StartGameOnePlayer() {
@@ -58,5 +62,8 @@ public class GameState : MonoBehaviour {
 
 		PlayerOne.GetComponent<PlayerController> ().enabled = false;
 		PlayerTwo.GetComponent<PlayerController> ().enabled = false;
+
+		GameOverScreen.SetActive (true);
+		WinText.GetComponent<Text> ().text = playerName + " wins!";
 	}
 }
