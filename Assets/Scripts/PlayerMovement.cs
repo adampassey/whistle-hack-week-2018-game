@@ -6,8 +6,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float Speed = 1.0f;
 	public GameObject Sprite;
+    public string UpAnimation = "knight-animation-walk-up";
+    public string DownAnimation = "knight-animation-walk-down";
+    public string LeftAnimation = "knight-animation-walk-left";
+    public string RightAnimation = "knight-animation-walk-left";
+    public string IdleAnimation = "knight-animation-idle";
 
-	private Animator anim;
+    private Animator anim;
 	private SpriteRenderer renderer;
 	private Vector2 direction;
 
@@ -21,17 +26,17 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 
 		if (direction.y > 0) {
-			anim.Play ("knight-animation-walk-up");
+			anim.Play (UpAnimation);
 		} else if (direction.y < 0) {
-			anim.Play ("knight-animation-walk-down");
+			anim.Play (DownAnimation);
 		} else if (direction.x < 0) {
-			anim.Play ("knight-animation-walk-left");
+			anim.Play (LeftAnimation);
 			renderer.flipX = false;
 		} else if (direction.x > 0) {
-			anim.Play ("knight-animation-walk-left");
+			anim.Play (RightAnimation);
 			renderer.flipX = true;
 		} else {
-			anim.Play ("knight-animation-idle");
+			anim.Play (IdleAnimation);
 		}
 
 		if (direction.x != 0 & direction.y != 0) {
