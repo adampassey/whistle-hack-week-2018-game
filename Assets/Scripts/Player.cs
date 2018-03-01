@@ -13,7 +13,9 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (HasWhistle) {
-			arrow = Instantiate (ArrowPrefab);
+			//arrow = Instantiate (ArrowPrefab);
+			//	no longer instantiating arrows
+			arrow = ArrowPrefab;
 			arrow.transform.position = transform.position;
 		}
 	}
