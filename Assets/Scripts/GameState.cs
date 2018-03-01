@@ -10,6 +10,7 @@ public class GameState : MonoBehaviour {
 	public GameObject MainCamera;
 	public GameObject ActorObject;
 	public GameObject StartScreenObject;
+	public GameObject Splitter;
 
 	public GameObject PlayerOne;
 	public GameObject PlayerTwo;
@@ -30,6 +31,11 @@ public class GameState : MonoBehaviour {
 		MainCamera.SetActive (false);
 		SplashScreenObject.SetActive (false);
 		StartScreenObject.SetActive (false);
+		ActorObject.SetActive (true);
+		Splitter.SetActive (true);
+	}
+
+	public void ActivateActors() {
 		ActorObject.SetActive (true);
 	}
 
