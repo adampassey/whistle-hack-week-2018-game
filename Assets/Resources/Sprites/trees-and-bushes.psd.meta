@@ -4,7 +4,14 @@ timeCreated: 1519870256
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: trees-and-bushes_0
+    21300000: tree-1
+    21300002: tree-2
+    21300004: tree-small-1
+    21300006: tree-small-2
+    21300008: bush-1
+    21300010: bush-2
+    21300012: biush-3
+    21300014: tree-3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -32,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -81,13 +88,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trees-and-bushes_0
+      name: tree-1
       rect:
         serializedVersion: 2
         x: 119
         y: 13
         width: 103
         height: 138
+      alignment: 9
+      pivot: {x: 0.49827915, y: 0.15706748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tree-2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 113
+        height: 124
+      alignment: 9
+      pivot: {x: 0.50470567, y: 0.096908264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tree-small-1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 115
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5059087, y: 0.20004527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tree-small-2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 129
+        width: 25
+        height: 30
+      alignment: 9
+      pivot: {x: 0.47873047, y: 0.17504933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bush-1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 85
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bush-2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 96
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: biush-3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 54
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tree-3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 4
+        width: 33
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
