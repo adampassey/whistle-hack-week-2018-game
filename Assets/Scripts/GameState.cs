@@ -24,9 +24,12 @@ public class GameState : MonoBehaviour {
 
 	public bool GameOver = false;
 
+	private AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
 		Instance = this;
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -106,5 +109,6 @@ public class GameState : MonoBehaviour {
 		GameOverScreen.SetActive (true);
 		WinText.GetComponent<Text> ().text = playerName + " has found their dog!";
 
+		audio.Play ();
 	}
 }
