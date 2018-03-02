@@ -18,6 +18,9 @@ public class GameState : MonoBehaviour {
 
 	public GameObject PlayerOne;
 	public GameObject PlayerTwo;
+	public GameObject PlayerTwoAI;
+
+	public GameObject PlayerTwoCamera;
 
 	public bool GameOver = false;
 
@@ -31,7 +34,7 @@ public class GameState : MonoBehaviour {
 		
 	}
 
-	public void StartGame() {
+	public void StartGame(bool AI = false) {
 		MainCamera.SetActive (false);
 		SplashScreenObject.SetActive (false);
 		StartScreenObject.SetActive (false);
@@ -45,7 +48,12 @@ public class GameState : MonoBehaviour {
 		}
 
 		p.GetComponent<Player> ().HasWhistle = true;
-		p.transform.Find ("Whistle").gameObject.SetActive (true);
+
+		if (!AI) {
+			p.transform.Find ("Whistle").gameObject.SetActive (true);
+		} else {
+			PlayerTwoAI.transform.Find ("Whistle").gameObject.SetActive (true);
+		}
 	}
 
 	public void ActivateActors() {
@@ -58,19 +66,38 @@ public class GameState : MonoBehaviour {
 
 	public void StartGameOnePlayer() {
 		StartGame ();
+		PlayerTwoCamera.GetComponent<CameraController> ().Target = PlayerTwoAI.transform;
+		Destroy (PlayerTwo.gameObject);
 	}
 
 	public void StartGameTwoPlayer() {
 		StartGame ();
+		Destroy (PlayerTwoAI.gameObject);
 	}
 
 	public void Win(string playerName) {
 		GameOver = true;
 
 		PlayerOne.GetComponent<PlayerController> ().enabled = false;
-		PlayerTwo.GetComponent<PlayerController> ().enabled = false;
+		if (PlayerTwo != null) {
+			PlayerController two = PlayerTwo.GetComponent<PlayerController> ();
+			if (two != null) {
+				two.enabled = false;
+			}
+		}
+
+		if (PlayerTwoAI != null) {
+			PlayerController twoAI = PlayerTwoAI.GetComponent<PlayerController> ();
+			if (twoAI != null) {
+				twoAI.enabled = false;
+			}
+		}
+
+//		PlayerTwo.GetComponent<PlayerController> ().enabled = false;
+//		PlayerTwoAI.GetComponent<PlayerController> ().enabled = false;
 
 		GameOverScreen.SetActive (true);
 		WinText.GetComponent<Text> ().text = playerName + " wins!";
+
 	}
 }
