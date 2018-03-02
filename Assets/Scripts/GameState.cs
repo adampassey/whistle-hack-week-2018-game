@@ -37,6 +37,15 @@ public class GameState : MonoBehaviour {
 		StartScreenObject.SetActive (false);
 		ActorObject.SetActive (true);
 		Splitter.SetActive (true);
+
+		GameObject p = PlayerTwo;
+
+		if (Random.Range (1, 3) == 1) {
+			p = PlayerOne;
+		}
+
+		p.GetComponent<Player> ().HasWhistle = true;
+		p.transform.Find ("Whistle").gameObject.SetActive (true);
 	}
 
 	public void ActivateActors() {
