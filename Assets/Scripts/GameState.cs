@@ -56,8 +56,6 @@ public class GameState : MonoBehaviour {
 	}
 
 	public void Win(string playerName) {
-		Debug.Log (playerName + " wins!");
-
 		GameOver = true;
 
 		PlayerOne.GetComponent<PlayerController> ().enabled = false;
