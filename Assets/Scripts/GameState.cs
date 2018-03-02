@@ -78,11 +78,16 @@ public class GameState : MonoBehaviour {
 	public void Win(string playerName) {
 		GameOver = true;
 
+		//	I would never normally do this but I don't
+		//	have time for anything else. sue me.
+
 		PlayerOne.GetComponent<PlayerController> ().enabled = false;
 		if (PlayerTwo != null) {
 			PlayerController two = PlayerTwo.GetComponent<PlayerController> ();
 			if (two != null) {
 				two.enabled = false;
+				PlayerTwo.GetComponent<PlayerMovement> ().Move (Vector2.zero);
+				PlayerTwo.GetComponent<PlayerMovement> ().PlayIdle ();
 			}
 		}
 
@@ -90,11 +95,10 @@ public class GameState : MonoBehaviour {
 			PlayerController twoAI = PlayerTwoAI.GetComponent<PlayerController> ();
 			if (twoAI != null) {
 				twoAI.enabled = false;
+				PlayerTwoAI.GetComponent<PlayerMovement> ().Move (Vector2.zero);
+				PlayerTwoAI.GetComponent<PlayerMovement> ().PlayIdle ();
 			}
 		}
-
-//		PlayerTwo.GetComponent<PlayerController> ().enabled = false;
-//		PlayerTwoAI.GetComponent<PlayerController> ().enabled = false;
 
 		GameOverScreen.SetActive (true);
 		WinText.GetComponent<Text> ().text = playerName + " wins!";

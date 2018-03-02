@@ -13,7 +13,7 @@ public class DogController : MonoBehaviour {
 	void Start () {
         movement = GetComponent<PlayerMovement>();
         lastTimeChange = 0;
-        ChangeDirectionTime = Random.Range(3.0f, 7.0f);
+        ChangeDirectionTime = Random.Range(1.0f, 5.0f);
 		movement.Move (Vector2.zero);
 	}
 	
