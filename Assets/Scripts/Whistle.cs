@@ -12,7 +12,7 @@ public class Whistle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.GetComponent<SpriteRenderer> ().sortingOrder = 32767;
+
 	}
 
 	public void KillMePlease() {
