@@ -43,17 +43,20 @@ public class GameState : MonoBehaviour {
 
 		GameObject p = PlayerTwo;
 
-		if (Random.Range (1, 3) == 1) {
+		//	only player 2 is considered for Whistle if no AI
+		int playerWithWhislte = Random.Range (1, 3);
+		if (AI) {
 			p = PlayerOne;
-		}
-
-		p.GetComponent<Player> ().HasWhistle = true;
-
-		if (!AI) {
-			p.transform.Find ("Whistle").gameObject.SetActive (true);
 		} else {
-			PlayerTwoAI.transform.Find ("Whistle").gameObject.SetActive (true);
+			if (playerWithWhislte == 1) {
+				p = PlayerOne;
+			} else {
+				p = PlayerTwo;
+			}
 		}
+
+		p.transform.Find ("Whistle").gameObject.SetActive (true);
+		p.GetComponent<Player> ().HasWhistle = true;
 	}
 
 	public void ActivateActors() {
@@ -65,13 +68,13 @@ public class GameState : MonoBehaviour {
 	}
 
 	public void StartGameOnePlayer() {
-		StartGame ();
+		StartGame (true);
 		PlayerTwoCamera.GetComponent<CameraController> ().Target = PlayerTwoAI.transform;
 		Destroy (PlayerTwo.gameObject);
 	}
 
 	public void StartGameTwoPlayer() {
-		StartGame ();
+		StartGame (false);
 		Destroy (PlayerTwoAI.gameObject);
 	}
 
@@ -101,7 +104,7 @@ public class GameState : MonoBehaviour {
 		}
 
 		GameOverScreen.SetActive (true);
-		WinText.GetComponent<Text> ().text = playerName + " wins!";
+		WinText.GetComponent<Text> ().text = playerName + " has found their dog!";
 
 	}
 }

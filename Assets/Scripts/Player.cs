@@ -36,6 +36,9 @@ public class Player : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject == null || Target.gameObject == null) {
+			return;
+		}
 		if (coll.gameObject.name == Target.gameObject.name) {
 			if (coll.gameObject == null)
 				return;
