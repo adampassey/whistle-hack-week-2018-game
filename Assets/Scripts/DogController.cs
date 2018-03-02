@@ -6,6 +6,7 @@ public class DogController : MonoBehaviour {
 
     public float ChangeDirectionTime = 5.0f;
     public Vector2 moveDirection = Vector2.zero;
+	public bool RandomStart = false;
     private float lastTimeChange;
     private PlayerMovement movement;
 
@@ -15,6 +16,16 @@ public class DogController : MonoBehaviour {
         lastTimeChange = 0;
         ChangeDirectionTime = Random.Range(1.0f, 5.0f);
 		movement.Move (Vector2.zero);
+
+		if (RandomStart) {
+			Transform[] dogSpawns = DogSpawns.Instance.SpawnPoints;
+
+			int index = Random.Range (0, dogSpawns.Length - 1);
+			Vector2 startingPos = dogSpawns [index].position;
+
+			transform.position = startingPos;
+			lastTimeChange = Time.timeSinceLevelLoad;
+		}
 	}
 	
 	// Update is called once per frame
@@ -26,19 +37,13 @@ public class DogController : MonoBehaviour {
 	}
 
     private void changeDirection() {
-		Vector3 newPos = new Vector3 (
-			                 Random.Range (-6, 13),
-			                 Random.Range (-9, 8),
-							 0
-		                 );
-		moveDirection = (newPos - transform.position).normalized;
 
-		if (Random.Range (0, 2) == 0) {
-			moveDirection.x = -moveDirection.x;
-		} 
-		if (Random.Range (0, 2) == 0) {
-			moveDirection.y = -moveDirection.y;
-		}
+		Vector2 newPos = Vector2.zero;
+
+		newPos.x = Random.Range (-1, 1);
+		newPos.y = Random.Range (-1, 1);
+
+		moveDirection = newPos;
 
         lastTimeChange = Time.timeSinceLevelLoad;
     }

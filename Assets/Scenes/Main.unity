@@ -346,6 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 0
 --- !u!114 &7524893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8772,6 +8773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 0
 --- !u!114 &668147043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9112,6 +9114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 0
 --- !u!114 &699363742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9534,11 +9537,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4821098487335704, guid: f36e8c5cc650f494d8a15edf111b3f26, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.89
+      value: -5.85
       objectReference: {fileID: 0}
     - target: {fileID: 4821098487335704, guid: f36e8c5cc650f494d8a15edf111b3f26, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.09
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 4821098487335704, guid: f36e8c5cc650f494d8a15edf111b3f26, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13473,6 +13476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 0
 --- !u!114 &1003219375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14053,6 +14057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 1
 --- !u!114 &1032318059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14134,8 +14139,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -18015,6 +18020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 1
 --- !u!114 &1385206127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18064,8 +18070,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -24274,6 +24280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangeDirectionTime: 5
   moveDirection: {x: 0, y: 0}
+  RandomStart: 0
 --- !u!114 &1827830105
 MonoBehaviour:
   m_ObjectHideFlags: 0
